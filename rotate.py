@@ -30,7 +30,10 @@ class Solution:
         # return: List[List[int]]
         m = []
         for i in range(0, len(matrix)):
-            m.append(matrix[:, i])
+            l = []
+            for j in range(len(matrix[0])-1, -1, -1):
+                l.append(matrix[j][i])
+            m.append(l)
         return m
         # TODO: Write code below to return a nested list with the solution to the prompt
         pass
